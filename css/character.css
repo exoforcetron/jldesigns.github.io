@@ -1,0 +1,141 @@
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+footer{
+/*  bottom: 0;*/
+}
+#vid_mid{
+  width: 100%;
+  margin-bottom: 10px;
+}
+#vid_mid iframe{
+  display: block;
+  margin-right: auto;
+  margin-left: auto; 
+/*  margin-right: 15%;*/
+/*  margin-left: 15%; */
+
+}
+#title{
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+}
+#title img{
+  margin: 0 auto;
+}
+#char_holder{
+  width: 100%;
+  background-color: #FF699D;
+  background-image: linear-gradient(to right, #1DEBAC, yellow);
+/*  background-color: #1DEBAC;*/
+  height: 900px;
+  margin-bottom: 50px;
+}
+.background{
+  width: 100%;
+  background-color: #1DEBAC;
+  height: 500px;
+  -webkit-perspective: 150px;
+/*  position: relative;*/
+}
+
+.margin{
+  padding: 15% 5% 5% 10%;
+/*
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+*/
+}
+.image{
+  position: absolute;
+  right: 16%;
+  top: 80%;
+}
+.contents{
+  float: left;
+  position: relative;
+  top:-200px;
+  width: 50%;
+  padding: 30px;
+}
+.one{
+  display: flex;
+  list-style-type: none; 
+  vertical-align: baseline;
+}
+.sub{
+/*  margin-right: 39%;*/
+  display: flex;
+  justify-content: space-around;
+}
+.sub2{
+  margin-right: 25%;
+}
+.small_m{
+  margin-right: 10%;
+}
+.border{
+/*  border-bottom: 3px solid;*/
+}
+.sub_cont{
+/*
+  justify-content: space-between;
+  display: flex;
+*/
+/*  padding: 5px;*/
+}
+/*
+.sub_cont ul{
+   list-style-type: none; 
+  vertical-align: baseline;
+}*/
+.seco{
+  width: 50%;
+}
+tr{
+  text-align: left;
+  margin-bottom: 10px;
+}
+.invis{
+  opacity: 0;
+}
+.contents th{
+  padding: 5px;
+}
+.triangle-right {
+  position: relative;
+  top: 250px;
+/*  right: 90px;*/
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #555;
+	border-bottom: 25px solid transparent;
+    float: right;  
+  z-index: 50;
+}
+
+.triangle-left {
+  position: relative;
+  top: 250px;
+/*  left: 90px;*/
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid #555;
+	border-bottom: 25px solid transparent;
+  float: left;
+  z-index: 50;
+}
+.triangle-left:hover{
+  border-right: 50px solid #FF699D;
+}
+.triangle-right:hover{
+  border-left: 50px solid #FF699D;
+}

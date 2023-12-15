@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <title>25-ji, Night Code de.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/character.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/responsive_home.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <script type="text/javascript" src="js/selector.js"></script>
+  <link rel="icon" href="media/25.ico" type="image/x-icon">
+  <style>
+    #one_img{
+      position: absolute;
+      right: -85px;
+    }
+    #two_img{
+      position: absolute;
+      right: 0;
+      top:-90px;
+    }
+  </style>
+</head>
+<body onload="my()">
+ <div id="nothing">
+   <h1 id="empty" class="hidden">yes</h1>
+ <h1 id="whats" class="hidden"></h1>
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="home.html"><img  src="https://pjsekai.sega.jp/assets/images/shared/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+     <a href="about.html" id="about">ABOUT</a>
+     <a href="songs.html" id="songs">SONGS</a>
+     <a href="#" id="char">CHARACTERS<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="#707070"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>
+     </a>
+     <a  href="gameplay.html" id="game">GAMEPLAY</a>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="virtual" href="virtual-singer.html">Virtual Singer</a></li>
+       <li><a id="leo" href="leo-need.html">Leo/need</a></li>
+       <li><a id="more" href="more-more-jump.html">MORE MORE JUMP!</a></li>
+       <li><a id="vivid" href="vivid-bad-squad.html">Vivid BAD SQUAD</a></li>
+       <li><a id="wonderlands" href="wonderlandsxshowtime.html">WonderlandsxShowtime</a></li>
+       <li><a id="night" href="25-ji-night-code-de.html">25-ji, Night Code de.</a></li>
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">char</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about.html" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="songs.html" id="songS" class="img">SONGS</a>
+        </li>
+        <li>
+          <a href="#" id="charS" class="img">CHARACTERS<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="hidden" id="noo">
+          <a href="more-more-jump.html" id="moremore" class="img">MORE MORE JUMP!</a>
+        </li>
+        <li class="hidden" id="no">
+          <a href="wonderlandsxshowtime.html" id="wond" class="img">WonderlandsxShowtime</a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="gameS"  class="img">GAMEPLAY</a>  
+        </li>
+      </ul>
+    </div>    
+</nav>
+   <div id="title">
+    <img src="https://pjsekai.sega.jp/assets/images/character/unite05/logo_group01.png">
+  </div>
+  <div id="vid_mid">
+  <iframe  width="560" height="315" src="https://www.youtube-nocookie.com/embed/qB2Q7OuZPoU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div id="char_holder"> 
+   <h1 id="name" class="hidden">one</h1>
+    <div class="margin">
+    <div class="triangle-right" onclick="right()">
+    </div>
+    <div class="triangle-left" onclick="left()"></div>
+    
+     <div id="one" class="contents">
+        <h2>Yoisaki Kanade (K)</h2>
+         <h3>“…I must write more songs…”</h3>
+         <table style="width: 100%">
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>Febuary 10</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>154 cm</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>Home-schooled</td>
+          </tr>
+<!--
+          <tr>
+            <th>School year</th>
+            <td>2-D</td>
+          </tr>
+-->
+          <tr>
+            <th>Hobbies</th>
+            <td>Searching and listening to music</td>
+          </tr>
+          <tr>
+            <td class="invis">hi</td>
+            <td>Watching movies, anime.</td>
+          </tr>
+          <tr>
+            <th>Special Skills</th>
+            <td>Keeping track of time just through intuition</td>
+          </tr>
+<!--
+          <tr>
+            <td class="invis"></td>
+            <td>Taking care of children</td>
+          </tr>
+-->
+          <tr>
+            <th>Dislikes</th>
+            <td>Direct sunlight</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Any kind of house work</td>
+          </tr>
+         </table>
+         <p>Kanade is traumatized by a time when her own music caused despair to someone important to her. Ever since that incident, she has been writing music to make others happy, and started the music circle 25-ji, Night Code de. and is mainly in charge of composition. She goes by the alias K online.</p>
+         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SjFKMtiw44U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+       
+      <div id="two" class="contents hidden">
+        <h2>Asahina Mafuyu (Yuki)</h2>
+         <h3>“How nice it must be, for you to have music to call your own…”</h3>
+         <table style="width: 100%">
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>January 27</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>162 cm</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>Miyamasuzaka Girls Academy</td>
+          </tr>
+          <tr>
+            <th>School year</th>
+            <td>2-B</td>
+          </tr>
+          <tr>
+            <th>Hobbies</th>
+            <td>Visiting the Aquarium
+</td>
+          </tr>
+          <tr>
+            <th>Special Skills</th>
+            <td>English conversation</td>
+          </tr>
+          <tr>
+            <th>Dislikes</th>
+            <td>nothing</td>
+          </tr>
+         </table>
+         <p>Mafuyu is an honor student, and the only one who in her group who regularly attends school. However, not all is what it seems with her...</p>
+         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9gxS69mISDA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div> 
+      <div id="three" class="contents hidden">
+        <h2>Shinonome Ena (Enanan)</h2>
+         <h3>“Fufufu, I’m getting so many likes. ...however...”</h3>
+         <table style="width: 100%">
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>April 30</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>158 cm</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>Kamiyama High School</td>
+          </tr>
+          <tr>
+            <th>School year</th>
+            <td>2-D</td>
+          </tr>
+          <tr>
+            <th>Hobbies</th>
+            <td>Drawing</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Egosurfing</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Posting selfies on social media</td>
+          </tr>
+          <tr>
+            <th>Special Skills</th>
+            <td>Researching fashion accessories</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Choosing the right ingredients when cooking</td>
+          </tr>
+          <tr>
+            <th>Dislikes</th>
+            <td>Waking up in the morning</td>
+          </tr>
+         </table>
+         <p>Ena's father was a famous artist. She often draws and posts her drawings online. She has a great sense of social media and would like to get more popular.
+
+Yoisaki Kanade saw some of her illustrations online and invited her to join her circle as an illustrator.
+
+</p>
+         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9UYccoM8AvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div> 
+       <div id="four" class="contents hidden">
+        <h2>Akiyama Mizuki (Amia)</h2>
+         <h3>“I welcome anything as long as it’s cute♪”</h3>
+         <table style="width: 100%">
+          <tr>
+            <th>Gender</th>
+            <td>Uknown</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>August 27</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>163 cm</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>Kamiyama High School</td>
+          </tr>
+          <tr>
+            <th>School year</th>
+            <td>1-A</td>
+          </tr>
+          <tr>
+            <th>Hobbies</th>
+            <td>Gathering materials for MVs</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Making collages</td>
+          </tr>
+          <tr>
+            <th>Special Skills</th>
+            <td>Modifying Western-style clothes</td>
+          </tr>
+<!--
+          <tr>
+            <td class="invis"></td>
+            <td>Embroidery</td>
+          </tr>
+-->
+          <tr>
+            <th>Dislikes</th>
+            <td>Spicy food</td>
+          </tr>
+<!--
+          <tr>
+            <td class="invis"></td>
+            <td>Operating Machines</td>
+          </tr>
+-->
+         </table>
+         <p>Mizuki's a moody person who loves cute things. They were captivated by Kanade's music upon listening to it, and like to upload MVs online. This caught Kanade's attention, and Mizuki was thus invited to join "25-ji, Night Code de." However, Mizuki has a secret that no one else in the group knows about...</p>
+         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/u7vu0ubr_nM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>  
+    
+     </div>
+     <div class="image" id="cont_img">
+      <img id="one_img" class="right" src="https://pjsekai.sega.jp/assets/images/character/unite05/chara_05.png?191208"> 
+      <img id="two_img" class="right hidden" src="https://pjsekai.sega.jp/assets/images/character/unite05/chara_04.png?191208"> 
+      <img id="four_img" class="right hidden" src="https://pjsekai.sega.jp/assets/images/character/unite05/chara_02.png?191208"> 
+      <img id="three_img" class="right hidden" src="https://pjsekai.sega.jp/assets/images/character/unite05/chara_03.png?191208"> 
+      </div>
+    </div>
+
+<footer>
+ <div class="middle">
+  <p class="small">Author: Jessi Langager</p>
+  <p class="small"> © SEGA / © Craft Egg Inc. Developed by Colorful Palette / © Crypton Future Media, INC. Www.piapro.net All rights reserved.<br>The setting of Piapro Characters in this work is the setting in "Project Sekai" and is different from the official setting.<br>The product names and company names mentioned are registered trademarks of each company.<br>Images, texts, information, sounds, videos, etc. used on this site are protected by the copyright of SEGA Group Co., Ltd. or its affiliated companies.<br>Reproduction, reprinting, etc. is prohibited without the permission of the copyright holder.<p></div>
+</footer>
+  </div>
+</body>
+</html>

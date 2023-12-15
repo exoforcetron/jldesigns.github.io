@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <title>Songs</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/responsive_home.css">
+  <link rel="stylesheet" href="css/song.css">
+<!--  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">-->
+  <script type="text/javascript" src="js/response.js"></script>
+  <script type="text/javascript" src="js/video.js"></script>
+  <script type="text/javascript" src="js/changelang.js"></script>
+  <link rel="icon" href="media/logo.ico" type="image/x-icon">
+</head>
+<body onload="my()">
+<div id="nothing">
+<p id="var" style="position: absolute; top: 65px;"></p>
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="home.html"><img  src="https://pjsekai.sega.jp/assets/images/shared/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+     <a href="about.html" id="about">ABOUT</a>
+     <a href="songs.html" id="songs">SONGS</a>
+     <a href="#" id="char">CHARACTERS<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="#707070"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>
+     </a>
+     <a  href="gameplay.html" id="game">GAMEPLAY</a>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="virtual" href="virtual-singer.html">Virtual Singer</a></li>
+       <li><a id="leo" href="leo-need.html">Leo/need</a></li>
+       <li><a id="more" href="more-more-jump.html">MORE MORE JUMP!</a></li>
+       <li><a id="vivid" href="vivid-bad-squad.html">Vivid BAD SQUAD</a></li>
+       <li><a id="wonderlands" href="wonderlandsxshowtime.html">WonderlandsxShowtime</a></li>
+       <li><a id="night" href="25-ji-night-code-de.html">25-ji, Night Code de.</a></li>
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">songs</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about.html" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="songs.html" id="songS" class="img">SONGS</a>
+        </li>
+        <li>
+          <a href="#" id="charS" class="img">CHARACTERS<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="hidden" id="noo">
+          <a href="more-more-jump.html" id="moremore" class="img">MORE MORE JUMP!</a>
+        </li>
+        <li class="hidden" id="no">
+          <a href="wonderlandsxshowtime.html" id="wond" class="img">WonderlandsxShowtime</a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="gameS"  class="img">GAMEPLAY</a>  
+        </li>
+      </ul>
+    </div>    
+  </nav>
+  
+<!--  song section  -->
+  <h1 id="songT">Songs</h1>
+  <!--  song holder  -->
+   <div id="song_t" class="hidden">  
+<!--   <div class="contt">-->
+     <ul id="song_list">
+     <li class="no" onclick="show()">
+           <h4 id="oneW">Sekai wa Mada Hajimatte sura Inai</h4>     
+     </li>  
+      
+     <li class="no"  onclick="show()">
+       <h4>Ready Steady</h4>
+     </li>
+      <li class="no"  onclick="show()">
+        <h4 id="twoW">Idol Shineitai</h4>
+     </li>
+    <li class="no">
+      <h4 id="threeW">Kuyamu to Kaite Mirai</h4>
+     </li>
+      <li class="no" onclick="show()">
+      <h4 id="fourW">Keitai Renwa</h4>
+      
+     </li>
+    <li class="no" onclick="show()">
+      <h4>needLe</h4>
+      
+     </li>
+    <li class="no" onclick="show()">
+      <h4 id="fiveW">Jackpot Sad Girl</h4>
+     
+     </li>
+      <li class="no" onclick="show()">
+      <h4 id="sixW">Stella</h4>
+     
+     </li>
+      <li class="no" onclick="show()">
+      <h4 id="sevenW">Sekai</h4>
+    
+     </li> 
+      <li class="no" onclick="show()">
+      <h4 id="eightW">Wah Wah World</h4>
+       
+     </li>
+      <li class="no" onclick="show()">
+      <h4 id="nineW">Potato ni Natteiku</h4>
+       
+     </li>
+    <li class="no" onclick="show()">
+       <h4>Tell Your World</h4>
+     </li>
+
+      <li class="no" onclick="show()">
+      <h4 id="tenW">Roki</h4>
+        </li>
+      <li class="no" onclick="show()">
+         <h4 id="elevenW">Teo</h4>
+     </li>
+    <li class="no" onclick="show()">
+         <h4 id="nineteenT">Hibana -Reloaded-</h4>
+     </li>
+      <li class="no" onclick="show()">
+         <h4 id="twelveW">Happy Synthesizer</h4>
+     </li>
+     <li class="no" onclick="show()">
+       <h4 id="thirteenW">Charles</h4>
+     </li>
+    <li class="no" onclick="show()">
+         <h4 id="twentyW">Viva Happy</h4>
+     </li>
+      <li class="no" onclick="show()">
+         <h4>Nostalogic</h4>
+     </li>
+ 
+ 
+    <li class="no" onclick="show()">
+         <h4 id="twentythreeW">Dappou Rock</h4>
+     </li>
+
+     <li class="no" onclick="show()">
+        <h4 id="forteenW">Rettou Joutou</h4>
+     </li>
+    <li class="no" onclick="show()">
+      <h4 id="fiveteenW">Gimme×Gimme</h4>
+     </li>
+<!--
+     <li id="vid_hold" class="none hidden">
+     <div class="align">
+      <button float="right" onclick="hide()">X</button>
+       <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/TxVWubp83iQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     
+       <div id="arrows" class="hidden">
+         <div id="right" class="arrow" onclick="forward()"></div>
+         <div id="left" class="arrow" onclick="backward()"></div>
+       </div>
+       </div>
+      </li>
+-->
+   </ul>
+<!--   </div>-->
+<!--   <div>-->
+    <ul id="song_info">
+     <li class="l" >         
+          <img src="https://static.miraheze.org/projectsekaiwiki/thumb/a/a7/Jacket051.png/440px-Jacket051.png" class="img">
+           <h4 id="oneT">Sekai wa Mada Hajimatte sura Inai</h4>
+           <h4>PinocchioP</h4>     
+             <ul>
+              <li>Hatsune Miku</li>
+            </ul>
+            <ul>
+              <li>Wonderlands×Showtime</li>
+              <li>Hatsune Miku</li>
+            </ul>
+            <ul>
+              <li>Wonderlands×Showtime</li>
+            </ul> 
+     </li>         
+     <li class="l hidden" onclick="ready()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://vignette.wikia.nocookie.net/projectsekai/images/a/af/Ready_Steady.jpg/revision/latest?cb=20200929145123" class="img">
+           <h4>Ready Steady</h4>
+           <h4>Giga</h4>
+         </li>
+         <li class="singers">
+             <ul>
+              <li>Hatsune Miku</li>
+              <li>Kagamine Len</li>
+              <li>Kagamine Rin</li>
+            </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+         </li>
+       </ul>
+     </li>
+      <li class="l hidden" onclick="idol()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/3/3f/Jacket057.png/440px-Jacket057.png" class="img">
+           <h4 id="twoT">Idol Shineitai</h4>
+           <h4>Mitchie M</h4>
+         </li>
+         <li class="singers">
+           <ul>
+          <li>Hatsune Miku</li>
+          <li>Kagamine Len</li>
+          <li>Kagamine Rin</li>
+          <li>Megurine Luka</li>
+          <li>MEIKO</li>
+          </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+         </li>
+       </ul>
+     </li>
+    <li class="l hidden">
+       <ul class="song_holder" onclick="kuyamu()">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/f/f7/Jacket060.png/440px-Jacket060.png" class="img">
+         <h4 id="threeT">Kuyamu to Kaite Mirai</h4>
+         <h4>Mafumafu</h4>
+         </li>
+         <li class="singers">
+           <ul>
+            <li>N/A</li>
+          </ul>
+          <ul>
+            <li>25-ji, Night Code de.</li>
+            <li>Hatsune Miku</li>
+          </ul>
+          <ul>
+            <li>25-ji, Night Code de.</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+      <li class="l hidden" onclick="keitai()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/9f/Jacket061.png/440px-Jacket061.png" class="img">
+         <h4 id="fourT">Keitai Renwa</h4>
+         <h4>Mafumafu</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>Hatsune Miku</li>
+          <li>Shinonome Ena</li>
+          <li>Akiyama Mizuk</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+    <li class="l hidden" onclick="need()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/c/ce/Jacket063.png/440px-Jacket063.png" class="img">
+         <h4>needLe</h4>
+         <h4>DECO*27</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>Leo/need</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+    <li class="l hidden" onclick="jackpot()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/97/Jacket062.png/440px-Jacket062.png" class="img">
+         <h4 id="fiveT">Jackpot Sad Girl</h4>
+         <h4>syudou</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>25-ji, Night Code de.</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+      <li class="l hidden" onclick="stella()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/6/69/Jacket064.png/440px-Jacket064.png" class="img">
+         <h4 id="sixT">Stella</h4>
+         <h4>Jin</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>Leo/need</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+      <li class="l hidden" onclick="セカイ()">
+       <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/7/7a/Jacket076.png/440px-Jacket076.png" class="img">
+         <h4 id="sevenT">Sekai</h4>
+         <h4>DECO*27 × Horie Shota(kemu)</h4>
+         <h4>Arrangement by Rockwell</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Hatsune Miku</li>
+          <li>Hoshino Ichika</li>
+          <li>Tenma Tsukasa</li>
+          <li>Yoisaki Kanade</li>
+        </ul>
+        <ul>
+          <li>Mixed</li>
+        </ul>
+         </li>
+       </ul>
+     </li> 
+      <li class="l hidden" onclick="wah()">
+       <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/e/e7/Jacket077.png/440px-Jacket077.png" class="img">
+         <h4 id="eightT">Wah Wah World</h4>
+         <h4>Giga × Mitchie M</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        <li>Kagamine Rin</li>
+        </ul>
+        <ul>
+          <li>Hatsune Miku</li>
+          <li>Hanasato Minori</li>
+          <li>Azusawa Kohane</li>
+        </ul>
+        <ul>
+          <li>Mixed</li>
+        </ul>
+
+         </li>
+       </ul>
+     </li>
+      <li class="l hidden" onclick="potatoe()">
+       <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://vignette.wikia.nocookie.net/projectsekai/images/7/73/Potato_ni_natte_iku.jpg/revision/latest/scale-to-width-down/620?cb=20200929143206" class="img">
+         <h4 id="nineT">Potato ni Natteiku</h4>
+         <h4>Neru</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Kagamine Rin</li>
+        <li>Kagamine Len</li>
+        </ul>
+        <ul>
+          <li>Unknown</li>
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+<!--        remember to update this song info, it is rel-->
+         <ul>
+           <li>Release October 31</li>
+           <li>level unknown</li>
+         </ul>
+
+         </li>
+       </ul>
+     </li>
+    <li class="l hidden" onclick="tell()">
+       <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/8/8a/Jacket001.png/440px-Jacket001.png" class="img">
+         <h4>Tell Your World</h4>
+         <h4>kz (livetune)</h4>
+         </li>
+         <li class="singers">
+            <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>Virtual Singer</li>
+        </ul>
+
+         </li>
+       </ul>
+     </li>
+<!--     this song was how I found out about project sekai-->
+      <li class="l hidden" onclick="roki()">
+       <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/9d/Jacket002.png/440px-Jacket002.png" class="img">
+             <h4 id="tenT">Roki</h4>
+             <h4>MikitoP</h4>
+         </li>
+         <li class="singers">
+             <ul>
+          <li>Kagamine Rin</li>
+        </ul>
+        <ul>
+          <li>Hoshino Ichika</li>
+        <li> Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+        </ul>
+
+        </ul>
+        </li>
+        <li class="l hidden" onclick="teo()">
+         <ul class="song_holder">        
+           <li class="icon">
+                <img src="https://static.miraheze.org/projectsekaiwiki/thumb/3/34/Jacket003.png/440px-Jacket003.png" class="img">
+               <h4 id="elevenT">Teo</h4>
+               <h4>Omoi</h4>
+               <h4>Lyrics by Sakurai</h4>
+           </li>
+           <li class="singers">
+               <ul>
+            <li>Kagamine Rin</li>
+          </ul>
+          <ul>
+            <li>Hoshino Ichika</li>
+          <li> Hatsune Miku</li>
+          </ul>
+          <ul>
+            <li>Leo/need</li>
+          </ul>
+
+          </li>
+       </ul>
+     </li>
+    <li class="l hidden" onclick="hibana()">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/2/29/Jacket006.png/440px-Jacket006.png" class="img">
+         <h4 id="nineteenT">Hibana -Reloaded-</h4>
+         <h4>DECO*27</h4>
+<h4>Arrangement by Rockwell</h4>
+         </li>
+         <li class="singers">
+             <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Hoshino Ichika</li>
+        <li> Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="l hidden" onclick="happy()">
+         <ul class="song_holder">        
+         <li class="icon">
+               <img src="https://static.miraheze.org/projectsekaiwiki/thumb/8/8e/Jacket010.png/440px-Jacket010.png" class="img">
+         <h4 id="twelveT">Happy Synthesizer</h4>
+         <h4>EasyPop</h4>
+         </li>
+         <li class="singers">
+             <ul>
+        <li>Hatsune Miku</li>
+        <li>Kagamine Rin</li>
+        <li>Megurine Luka</li>
+        <li>MEIKO</li>
+        </ul>
+        <ul>
+        <li>MORE MORE JUMP!</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+     <li class="l hidden">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/3/37/Jacket019.png/440px-Jacket019.png" class="img">
+         <h4 id="thirteenT">Charles</h4>
+         <h4>balloon</h4>
+         </li>
+         <li class="singers">
+                <ul>
+        <li>flower</li>
+        </ul>
+        <ul>
+        <li>Shinonome Ena</li>
+        <li>Akiyama Mizuki</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="l hidden" onclick="viva()">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/2/20/Jacket011.png/440px-Jacket011.png" class="img">
+         <h4 id="twentyT">Viva Happy</h4>
+         <h4>Mitchie M</h4>
+         </li>
+         <li class="singers">
+              <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        <li> Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+
+        </li>
+       </ul>
+     </li>
+      <li class="l hidden" onclick="nost()">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/e/e8/Jacket013.png/440px-Jacket013.png" class="img">
+         <h4>Nostalogic</h4>
+         <h4>yuukiss</h4>
+         <h4>Lyrics by yuukiss/rose</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>MEIKO</li>
+        </ul>
+        <ul>
+        <li>Kiritani Haruka</li>
+        <li>Hinomori Shizuku</li>
+        <li>MEIKO</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+
+        </li>
+       </ul>
+     </li>
+ 
+ 
+    <li class="l hidden" onclick="dappou()">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/6/63/Jacket021.png/440px-Jacket021.png" class="img">
+         <h4 id="twentythreeT">Dappou Rock</h4>
+         <h4>Neru</h4>
+         </li>
+         <li class="singers">
+                 <ul>
+          <li>Kagamine Len</li>
+        </ul>
+        <ul>
+          <li>Kagamine Len</li>  
+          <li>Tenma Tsukasa</li>      
+          <li> Kamishiro Rui</li>
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+<!--     Hated by life itself-->
+     <li class="l hidden" onclick="rettou()">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/e/e4/Jacket026.png/440px-Jacket026.png" class="img">
+         <h4 id="forteenT">Rettou Joutou</h4>
+         <h4>Giga</h4>
+         <h4>Lyrics by Reol</h4>
+         </li>
+         <li class="singers">
+                 <ul>
+          <li>Kagamine Len</li>
+          <li>Kagamine Rin</li>
+        </ul>
+        <ul>
+         <li>Azusawa Kohane</li>
+         <li>Shiraishi An</li>
+          <li>Kagamine Rin</li>      
+          <li>Kagamine Len</li>      
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="l hidden" onclick="gimme()">
+         <ul class="song_holder" id="gimme">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/f/f2/Jacket083.png/440px-Jacket083.png" class="img">
+         <h4 id="fiveteenT">Gimme×Gimme</h4>
+         <h4>HachiojiP, Giga</h4>
+         </li>
+         <li class="singers">
+                <ul>
+        <li>Kagamine Rin</li>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+<!--
+     <li id="vid_hold" class="none hidden">
+     <div class="align">
+      <button float="right" onclick="hide()">X</button>
+       <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/TxVWubp83iQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <h4 id="tx">Level</h4>
+       <div id="arrows" class="hidden">
+         <div id="right" class="arrow" onclick="forward()"></div>
+         <div id="left" class="arrow" onclick="backward()"></div>
+       </div>
+       </div>
+      </li>
+-->
+     <li>
+     </li>
+   </ul>
+<!--   </div>-->
+  </div>
+  <div id="songs_h">  
+   <ul id="s">
+     <li class="li">
+       <ul class="song_holder" onclick="sekai()">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/a/a7/Jacket051.png/440px-Jacket051.png" class="img">
+           <h4 id="one">Sekai wa Mada Hajimatte sura Inai</h4>
+           <h4>PinocchioP</h4>
+         </li>
+         <li class="singers">
+             <ul>
+              <li>Hatsune Miku</li>
+            </ul>
+            <ul>
+              <li>Wonderlands×Showtime</li>
+              <li>Hatsune Miku</li>
+            </ul>
+            <ul>
+              <li>Wonderlands×Showtime</li>
+            </ul>
+         </li>
+       </ul>
+     </li>    
+     <li class="li right_over" onclick="ready()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://vignette.wikia.nocookie.net/projectsekai/images/a/af/Ready_Steady.jpg/revision/latest?cb=20200929145123" class="img">
+           <h4>Ready Steady</h4>
+           <h4>Giga</h4>
+         </li>
+         <li class="singers">
+             <ul>
+              <li>Hatsune Miku</li>
+              <li>Kagamine Len</li>
+              <li>Kagamine Rin</li>
+            </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+         </li>
+       </ul>
+     </li>
+      <li class="li" onclick="idol()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/3/3f/Jacket057.png/440px-Jacket057.png" class="img">
+           <h4 id="two">Idol Shineitai</h4>
+           <h4>Mitchie M</h4>
+         </li>
+         <li class="singers">
+           <ul>
+          <li>Hatsune Miku</li>
+          <li>Kagamine Len</li>
+          <li>Kagamine Rin</li>
+          <li>Megurine Luka</li>
+          <li>MEIKO</li>
+          </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+         </li>
+       </ul>
+     </li>
+    <li class="li">
+       <ul class="song_holder" onclick="kuyamu()">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/f/f7/Jacket060.png/440px-Jacket060.png" class="img">
+         <h4 id="three">Kuyamu to Kaite Mirai</h4>
+         <h4>Mafumafu</h4>
+         </li>
+         <li class="singers">
+           <ul>
+            <li>N/A</li>
+          </ul>
+          <ul>
+            <li>25-ji, Night Code de.</li>
+            <li>Hatsune Miku</li>
+          </ul>
+          <ul>
+            <li>25-ji, Night Code de.</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+      <li class="li" onclick="keitai()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/9f/Jacket061.png/440px-Jacket061.png" class="img">
+         <h4 id="four">Keitai Renwa</h4>
+         <h4>Mafumafu</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>Hatsune Miku</li>
+          <li>Shinonome Ena</li>
+          <li>Akiyama Mizuk</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+    <li class="li" onclick="need()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/c/ce/Jacket063.png/440px-Jacket063.png" class="img">
+         <h4>needLe</h4>
+         <h4>DECO*27</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>Leo/need</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+    <li class="li" onclick="jackpot()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/97/Jacket062.png/440px-Jacket062.png" class="img">
+         <h4 id="five">Jackpot Sad Girl</h4>
+         <h4>syudou</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>25-ji, Night Code de.</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+      <li class="li" onclick="stella()">
+       <ul class="song_holder">        
+         <li class="icon">
+           <img src="https://static.miraheze.org/projectsekaiwiki/thumb/6/69/Jacket064.png/440px-Jacket064.png" class="img">
+         <h4 id="six">Stella</h4>
+         <h4>Jin</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>Leo/need</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+          </ul>
+         </li>
+       </ul>
+     </li>
+      <li class="li" onclick="セカイ()">
+       <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/7/7a/Jacket076.png/440px-Jacket076.png" class="img">
+         <h4 id="seven">Sekai</h4>
+         <h4>DECO*27 × Horie Shota(kemu)</h4>
+         <h4>Arrangement by Rockwell</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Hatsune Miku</li>
+          <li>Hoshino Ichika</li>
+          <li>Tenma Tsukasa</li>
+          <li>Yoisaki Kanade</li>
+        </ul>
+        <ul>
+          <li>Mixed</li>
+        </ul>
+         </li>
+       </ul>
+     </li> 
+      <li class="li" onclick="wah()">
+       <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/e/e7/Jacket077.png/440px-Jacket077.png" class="img">
+         <h4 id="eight">Wah Wah World</h4>
+         <h4>Giga × Mitchie M</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Hatsune Miku</li>
+        <li>Kagamine Rin</li>
+        </ul>
+        <ul>
+          <li>Hatsune Miku</li>
+          <li>Hanasato Minori</li>
+          <li>Azusawa Kohane</li>
+        </ul>
+        <ul>
+          <li>Mixed</li>
+        </ul>
+
+         </li>
+       </ul>
+     </li>
+      <li class="li" onclick="potatoe()">
+       <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://vignette.wikia.nocookie.net/projectsekai/images/7/73/Potato_ni_natte_iku.jpg/revision/latest/scale-to-width-down/620?cb=20200929143206" class="img">
+         <h4 id="nine">Potato ni Natteiku</h4>
+         <h4>Neru</h4>
+         </li>
+         <li class="singers">
+           <ul>
+        <li>Kagamine Rin</li>
+        <li>Kagamine Len</li>
+        </ul>
+        <ul>
+          <li>Unknown</li>
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+<!--        remember to update this song info, it is rel-->
+         <ul>
+           <li>Release October 31</li>
+           <li>level unknown</li>
+         </ul>
+
+         </li>
+       </ul>
+     </li>
+    <li class="li" onclick="tell()">
+       <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/8/8a/Jacket001.png/440px-Jacket001.png" class="img">
+         <h4>Tell Your World</h4>
+         <h4>kz (livetune)</h4>
+         </li>
+         <li class="singers">
+            <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>Virtual Singer</li>
+        </ul>
+
+         </li>
+       </ul>
+     </li>
+<!--     this song was how I found out about project sekai-->
+      <li class="li" onclick="roki()">
+       <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/9d/Jacket002.png/440px-Jacket002.png" class="img">
+             <h4 id="ten">Roki</h4>
+             <h4>MikitoP</h4>
+         </li>
+         <li class="singers">
+             <ul>
+          <li>Kagamine Rin</li>
+        </ul>
+        <ul>
+          <li>Hoshino Ichika</li>
+        <li> Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+        </ul>
+
+        </ul>
+        </li>
+        <li class="li" onclick="teo()">
+         <ul class="song_holder">        
+           <li class="icon">
+                <img src="https://static.miraheze.org/projectsekaiwiki/thumb/3/34/Jacket003.png/440px-Jacket003.png" class="img">
+               <h4 id="eleven">Teo</h4>
+               <h4>Omoi</h4>
+               <h4>Lyrics by Sakurai</h4>
+           </li>
+           <li class="singers">
+               <ul>
+            <li>Kagamine Rin</li>
+          </ul>
+          <ul>
+            <li>Hoshino Ichika</li>
+          <li> Hatsune Miku</li>
+          </ul>
+          <ul>
+            <li>Leo/need</li>
+          </ul>
+
+          </li>
+       </ul>
+     </li>
+    <li class="li" onclick="hibana()">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/2/29/Jacket006.png/440px-Jacket006.png" class="img">
+         <h4 id="nineteen">Hibana -Reloaded-</h4>
+         <h4>DECO*27</h4>
+<h4>Arrangement by Rockwell</h4>
+         </li>
+         <li class="singers">
+             <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Hoshino Ichika</li>
+        <li> Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li" onclick="happy()">
+         <ul class="song_holder">        
+         <li class="icon">
+               <img src="https://static.miraheze.org/projectsekaiwiki/thumb/8/8e/Jacket010.png/440px-Jacket010.png" class="img">
+         <h4 id="twelve">Happy Synthesizer</h4>
+         <h4>EasyPop</h4>
+         </li>
+         <li class="singers">
+             <ul>
+        <li>Hatsune Miku</li>
+        <li>Kagamine Rin</li>
+        <li>Megurine Luka</li>
+        <li>MEIKO</li>
+        </ul>
+        <ul>
+        <li>MORE MORE JUMP!</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li" onclick="viva()">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/2/20/Jacket011.png/440px-Jacket011.png" class="img">
+         <h4 id="twenty">Viva Happy</h4>
+         <h4>Mitchie M</h4>
+         </li>
+         <li class="singers">
+              <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        <li> Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+
+        </li>
+       </ul>
+     </li>
+      <li class="li" onclick="nost">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/e/e8/Jacket013.png/440px-Jacket013.png" class="img">
+         <h4>Nostalogic</h4>
+         <h4>yuukiss</h4>
+         <h4>Lyrics by yuukiss/rose</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>MEIKO</li>
+        </ul>
+        <ul>
+        <li>Kiritani Haruka</li>
+        <li>Hinomori Shizuku</li>
+        <li>MEIKO</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/3/35/Jacket018.png/440px-Jacket018.png" class="img">
+         <h4 id="twentyone">Asu no Yozora Shoukaihan</h4>
+         <h4>Orangestar</h4>
+         </li>
+         <li class="singers">
+               <ul>
+          <li>IA</li>
+        </ul>
+        <ul>
+          <li>Hoshino Ichika</li>        
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/3/37/Jacket019.png/440px-Jacket019.png" class="img">
+         <h4 id="thirteen">Charles</h4>
+         <h4>balloon</h4>
+         </li>
+         <li class="singers">
+                <ul>
+        <li>flower</li>
+        </ul>
+        <ul>
+        <li>Shinonome Ena</li>
+        <li>Akiyama Mizuki</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li" onclick="dappou()">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/6/63/Jacket021.png/440px-Jacket021.png" class="img">
+         <h4 id="twentythree">Dappou Rock</h4>
+         <h4>Neru</h4>
+         </li>
+         <li class="singers">
+                 <ul>
+          <li>Kagamine Len</li>
+        </ul>
+        <ul>
+          <li>Kagamine Len</li>  
+          <li>Tenma Tsukasa</li>      
+          <li> Kamishiro Rui</li>
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+<!--     Hated by life itself-->
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/c/c4/Jacket022.png/440px-Jacket022.png" class="img">
+         <h4 id="twentyfour">Inochi ni Kirawarete iru.</h4>
+         <h4>Kanzaki Iori</h4>
+         </li>
+         <li class="singers">
+                 <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>Yoisaki Kanade</li>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+     <li class="li" onclick="rettou()">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/e/e4/Jacket026.png/440px-Jacket026.png" class="img">
+         <h4 id="forteen">Rettou Joutou</h4>
+         <h4>Giga</h4>
+         <h4>Lyrics by Reol</h4>
+         </li>
+         <li class="singers">
+                 <ul>
+          <li>Kagamine Len</li>
+          <li>Kagamine Rin</li>
+        </ul>
+        <ul>
+         <li>Azusawa Kohane</li>
+         <li>Shiraishi An</li>
+          <li>Kagamine Rin</li>      
+          <li>Kagamine Len</li>      
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/6/61/Jacket027.png/440px-Jacket027.png" class="img">
+         <h4>Just Be Friends</h4>
+         <h4>Dixie Flatline</h4>
+
+         </li>
+         <li class="singers">
+            <ul>
+        <li>Megurine Luka</li>
+        </ul>
+        <ul>
+        <li>Azusawa Kohane</li>
+        <li>Shiraishi An</li>
+        <li>Megurine Luka</li>
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+     <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/2/22/Jacket028.png/440px-Jacket028.png" class="img">
+         <h4 id="twentyfive">Doctor=Funkbeat</h4>
+         <h4>nyanyannya</h4>
+         </li>
+         <li class="singers">
+            <ul>
+          <li>KAITO</li>
+        </ul>
+        <ul>
+         <li>KAITO</li>
+         <li>Shinonome Akito</li>
+          <li>Aoyagi Toya</li>          
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/8/87/Jacket036.png/440px-Jacket036.png" class="img">
+         <h4 id="twentysix">Miracle Paint</h4>
+         <h4>OSTER Project</h4>
+         </li>
+         <li class="singers">
+             <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>Wonderlands×Showtime</li>
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+     <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/1/18/Jacket038.png/440px-Jacket038.png" class="img">
+         <h4 id="fiveteen">Buriki no Dance</h4>
+         <h4>Hinata Electric Works</h4>
+         </li>
+         <li class="singers">
+             <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>Kagamine Len</li>
+         <li>Tenma Tsukasa</li>
+          <li>Kamishiro Rui</li>          
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/b/b5/Jacket041.png/440px-Jacket041.png" class="img">
+         <h4 id="sixteen">Sweet Magic</h4>
+         <h4>Junky</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>Hatsune Miku</li>
+        <li>Kagamine Rin</li>
+        <li>Kagamine Len</li>
+        <li>MEIKO</li>
+        <li>KAITO</li>
+        </ul>
+        <ul>
+        <li>Wonderlands×Showtime</li>
+      <li>Kagamine Rin</li>
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/1/12/Jacket043.png/440px-Jacket043.png" class="img">
+         <h4 id="twentyseven">Next Nest</h4>
+         <h4>Satsuki ga Tenkomori</h4>
+         </li>
+         <li class="singers">
+              <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/0/0a/Jacket044.png/440px-Jacket044.png" class="img">
+         <h4>Hand in Hand	</h4>
+         <h4>kz (livetune)</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/99/Dummyalbumart.png/440px-Dummyalbumart.png" class="img">
+         <h4 id="twentyeight">39 Music!</h4>
+         <h4>MikitoP</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/2/2e/Jacket047.png/440px-Jacket047.png" class="img">
+         <h4 id="twentynine">Melt</h4>
+         <h4>ryo</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/9f/Jacket048.png/440px-Jacket048.png" class="img">
+         <h4 id="thirty">World is Mine</h4>
+         <h4>ryo</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+             <img src="https://static.miraheze.org/projectsekaiwiki/thumb/a/ad/Jacket049.png/440px-Jacket049.png" class="img">
+         <h4 id="thirtyone">Hatsune Miku no Shoushitsu</h4>
+         <h4>cosMo@BousouP</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/e/e9/Jacket050.png/440px-Jacket050.png" class="img">
+         <h4>Blessing</h4>
+         <h4>halyosy</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>Hatsune Miku</li>
+        <li>Kagamine Rin</li>
+        <li>Kagamine Len</li>
+        <li>Megurine Luka</li>
+        <li>MEIKO</li>
+        <li>KAITO</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/e/ea/Jacket066.png/440px-Jacket066.png" class="img">
+         <h4 id="thirtytwo">Hello/How Are You</h4>
+         <h4>nanou</h4>
+         </li>
+         <li class="singers">
+             <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>Hatsune Miku</li>
+        <li>Asahina Mafuyu</li>
+        <li>Shinonome Ena</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+        <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/b/bb/Jacket067.png/440px-Jacket067.png" class="img">
+         <h4 id="seventeen">Jishou Mushoku</h4>
+         <h4>Sasanomaly</h4>
+         </li>
+         <li class="singers">
+              <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>Yoisaki Kanade</li>
+        <li>Asahina Mafuyu</li>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>25-ji, Night Code de.</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/7/7c/Jacket068.png/440px-Jacket068.png" class="img">
+         <h4 id="eighteen">Dance Robot Dance</h4>
+         <h4>NayutalieN</h4>
+         </li>
+         <li class="singers">
+               <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>Otori Emu</li>
+        <li>Kusanagi Nene</li>
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/a/a2/Jacket069.png/440px-Jacket069.png" class="img">
+         <h4 id="twentytwo">Fragile</h4>
+         <h4>nulut</h4>
+         </li>
+         <li class="singers">
+               <ul>
+        <li>GUMI</li>
+        </ul>
+        <ul>
+         <li>Shinonome Akito</li>
+        <li>Aoyagi Toya</li>
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/8/83/Jacket070.png/440px-Jacket070.png" class="img">
+         <h4 id="fortytwo">Melty Land Nightmare</h4>
+         <h4>Harumaki Gohan</h4>
+         </li>
+         <li class="singers">
+               <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+         <li>MORE MORE JUMP!</li>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+        <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+              <img src="https://static.miraheze.org/projectsekaiwiki/thumb/0/0c/Jacket071.png/440px-Jacket071.png" class="img">
+         <h4 id="fortyone">Tsugihagi Staccato</h4>
+         <h4>Toa</h4>
+         </li>
+         <li class="singers">
+               <ul>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>Hatsune Miku</li>
+        <li> Hanasato Minori</li>
+        <li>Hinomori Shizuku</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/d/d6/Jacket073.png/440px-Jacket073.png" class="img">
+         <h4 id="forty">Near</h4>
+         <h4>Natsushiro Takaaki</h4>
+         </li>
+         <li class="singers">
+                <ul>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+        <li>Hatsune Miku</li>
+         <li>Hanasato Minori</li>
+        <li>Kiritani Haruka</li>
+        </ul>
+        <ul>
+          <li>MORE MORE JUMP!</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/7/7f/Jacket078.png/440px-Jacket078.png" class="img">
+         <h4 id="thirtythree">Bouken no Sho ga Kiemashita!</h4>
+         <h4>JesusP</h4>
+         </li>
+         <li class="singers">
+                <ul>
+          <li>Kagamine Rin</li>
+          <li>Kagamine Len</li>
+        </ul>
+        <ul>
+        <li>Kagamine Rin</li>
+        <li>Kagamine Len</li>
+        <li>Tenma Tsukasa</li>
+        <li>Otori Emu</li>
+        </ul>
+        <ul>
+          <li>Wonderlands×Showtime</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/6/64/Jacket081.png/440px-Jacket081.png" class="img">
+         <h4 id="thirtyfour">Yobanashi Deceive</h4>
+         <h4>Jin</h4>
+         </li>
+         <li class="singers">
+                <ul>
+        <li>IA</li>
+        </ul>
+        <ul>
+        <li>Shinonome Akito</li>
+         <li>Aoyagi Toya</li>
+        <li>Kagamine Len</li>
+        </ul>
+        <ul>
+          <li>Vivid BAD SQUAD</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+      <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/9/99/Dummyalbumart.png/440px-Dummyalbumart.png" class="img">
+         <h4>Alive</h4>
+         <h4>Ichinose Rupo</h4>
+         </li>
+         <li class="singers">
+                <ul>
+        <li>Kagamine Rin</li>
+        </ul>
+        <ul>
+        <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li" onclick="gimme()">
+         <ul class="song_holder" id="gimme">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/f/f2/Jacket083.png/440px-Jacket083.png" class="img">
+         <h4>Gimme×Gimme</h4>
+         <h4>HachiojiP, Giga</h4>
+         </li>
+         <li class="singers">
+                <ul>
+        <li>Kagamine Rin</li>
+        <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/1/1c/Jacket084.png/440px-Jacket084.png" class="img">
+         <h4 id="thirtyfive">Junky Night Town Orchestra</h4>
+         <h4>3</h4>
+         </li>
+         <li class="singers">
+                <ul>
+                <li>Kagamine Len</li>
+        </ul>
+        <ul>
+          <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/c/ce/Jacket085.png/440px-Jacket085.png" class="img">
+         <h4>Leia -Remind</h4>
+         <h4>Yuyoyuppe</h4>
+         </li>
+         <li class="singers">
+                <ul>
+                <li>Megurine Luka</li>
+        </ul>
+        <ul>
+          <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/1/12/Jacket086.png/440px-Jacket086.png" class="img">
+         <h4>on the rocks</h4>
+         <h4>OSTER Project</h4>
+         </li>
+         <li class="singers">
+                <ul>
+                <li>MEIKO</li>
+                <li>KAITO</li>
+        </ul>
+        <ul>
+          <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.miraheze.org/projectsekaiwiki/thumb/d/d7/Jacket093.png/440px-Jacket093.png" class="img">
+         <h4 id="thirtysix">Aoku Kakero!</h4>
+         <h4>marasy</h4>
+         </li>
+         <li class="singers">
+                <ul>
+                <li>Unknown</li>
+        </ul>
+        <ul>
+          <li>Hoshino Ichika</li>
+          <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>Leo/need</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.wikia.nocookie.net/projectsekai/images/7/7c/Ura_Omote_Lovers.png/revision/latest/scale-to-width-down/450?cb=20201028162843" class="img">
+         <h4 id="thirtyseven">Ura-omote Lovers</h4>
+         <h4>wowaka</h4>
+         </li>
+         <li class="singers">
+                <ul>
+                <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.wikia.nocookie.net/project-diva/images/a/af/Rolling_Girl_illustration.jpg/revision/latest/top-crop/width/360/height/450?cb=20200322205325" class="img">
+         <h4 id="thirtyeight">Rolling Girl</h4>
+         <h4>wowaka</h4>
+         </li>
+         <li class="singers">
+                <ul>
+                <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+    <li class="li">
+         <ul class="song_holder">        
+         <li class="icon">
+            <img src="https://static.wikia.nocookie.net/projectsekai/images/e/ec/Unknown_Mother_Goose.jpg/revision/latest/scale-to-width-down/620?cb=20201028160959" class="img">
+         <h4 id="thirtynine">Unknown Mother Goose</h4>
+         <h4>wowaka</h4>
+         </li>
+         <li class="singers">
+                <ul>
+                <li>Hatsune Miku</li>
+        </ul>
+        <ul>
+          <li>N/A</li>
+        </ul>
+        <ul>
+          <li>VIRTUAL SINGER</li>
+        </ul>
+
+        </li>
+       </ul>
+     </li>
+     <li id="vid_hold" class="none hidden">
+     <div class="align">
+      <button float="right" onclick="hide()">X</button>
+       <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/TxVWubp83iQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <h4 id="tx">Level</h4>
+       <div id="arrows" class="hidden">
+       <div id="right" class="arrow" onclick="forward()"></div>
+       <div id="left" class="arrow" onclick="backward()"></div>
+       </div>
+       </div>
+      </li>
+     <li>
+<!--      fake variable -->
+       <h1 id="place" class="hidden">none</h1>
+     </li>
+   </ul>
+  </div>
+<!--Aside section-->
+ <ul id="aside">
+   <li id="kan"><a onclick="kanji()">漢字</a></li>
+   <li id="rom"><a onclick="roman()">romanji</a></li>
+   <li id="eng"><a onclick="eng()">eng</a></li>
+   <li id="top"><a href="#">top</a></li>
+ </ul>      
+    
+<div id="invis"></div>  
+  
+<!--  //yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+https://yt3.ggpht.com/a/AATXAJw7AFYm5sscegyt_5jOEI6Q1kiLZSJxBVkQPfmw=s288-c-k-c0xffffffff-no-rj-mo
+https://yt3.ggpht.com/a/AATXAJw7AFYm5sscegyt_5jOEI6Q1kiLZSJxBVkQPfmw=s144-c-k-c0xffffffff-no-rj-mo
+https://yt3.ggpht.com/a/AATXAJw7AFYm5sscegyt_5jOEI6Q1kiLZSJxBVkQPfmw=s100-c-k-c0xffffffff-no-rj-mo
+
+-->
+<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/XAg1jDDG49Y?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+</div>
+<footer>
+ <div class="middle">
+  <p class="small">Author: Jessi Langager</p>
+  <p class="small"> © SEGA / © Craft Egg Inc. Developed by Colorful Palette / © Crypton Future Media, INC. Www.piapro.net All rights reserved.<br>The setting of Piapro Characters in this work is the setting in "Project Sekai" and is different from the official setting.<br>The product names and company names mentioned are registered trademarks of each company.<br>Images, texts, information, sounds, videos, etc. used on this site are protected by the copyright of SEGA Group Co., Ltd. or its affiliated companies.<br>Reproduction, reprinting, etc. is prohibited without the permission of the copyright holder.<p></div>
+</footer>
+
+</body>
+</html>

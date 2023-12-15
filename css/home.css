@@ -1,0 +1,9 @@
+.head{
+  margin-top: 50px;
+/*  position: absolute;*/
+  top: 50px;
+  left: 0px;
+}
+footer{
+  bottom: 0;
+}

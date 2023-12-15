@@ -1,0 +1,11 @@
+*{
+/*    font-family: sans-serif;*/
+  font-family: 'Mitr', sans-serif;
+}
+nav a{
+  font-size: 16px;
+}
+.small{
+  font-size: 9px;
+}
+h1, h2{text-align: center;}

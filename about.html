@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <title>
+  about</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/responsive_home.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <link rel="icon" href="media/logo.ico" type="image/x-icon">
+  <style>
+    footer{
+      position: absolute;
+      bottom: -700px;
+      right: 0;
+    }
+    h4{
+      text-align: center;
+    }
+    #hodler{
+      width: 100%;
+      
+    }
+    #hodler li{
+      margin: auto;
+    }
+    #hodler ul{
+      display: flex;
+      margin-right: auto;
+/*      background-color: aliceblue;*/
+    }
+    #hodler a{
+      text-decoration: none;
+    }
+    #hodler img{
+      max-width: 150px;
+      min-width: 80px;
+    }
+    .hold{
+      width: 100%;
+      height: 500px;
+/*      background-color: yellow;*/
+    }
+    @media only screen and (max-width: 650px) {
+      footer{
+      position: absolute;
+      bottom: -800px;
+      right: 0;
+      }
+/*
+      iframe{
+        margin-bottom: 50px;
+      }
+*/
+      .hold{
+        height: 1000px;
+      }
+    }
+    }
+  </style>
+</head>
+<body onload="my()">
+ <div id="nothing">
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="home.html"><img  src="https://pjsekai.sega.jp/assets/images/shared/logo.png" width="auto" height="80"></a>
+      </div> 
+    <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="home.html"><img  src="https://pjsekai.sega.jp/assets/images/shared/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+     <a href="about.html" id="about">ABOUT</a>
+     <a href="songs.html" id="songs">SONGS</a>
+     <a href="#" id="char">CHARACTERS<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="#707070"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>
+     </a>
+     <a  href="gameplay.html" id="game">GAMEPLAY</a>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="virtual" href="virtual-singer.html">Virtual Singer</a></li>
+       <li><a id="leo" href="leo-need.html">Leo/need</a></li>
+       <li><a id="more" href="more-more-jump.html">MORE MORE JUMP!</a></li>
+       <li><a id="vivid" href="vivid-bad-squad.html">Vivid BAD SQUAD</a></li>
+       <li><a id="wonderlands" href="wonderlandsxshowtime.html">WonderlandsxShowtime</a></li>
+       <li><a id="night" href="25-ji-night-code-de.html">25-ji, Night Code de.</a></li>
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">about</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about.html" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="songs.html" id="songS" class="img">SONGS</a>
+        </li>
+        <li>
+          <a href="#" id="charS" class="img">CHARACTERS<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="hidden" id="noo">
+          <a href="more-more-jump.html" id="moremore" class="img">MORE MORE JUMP!</a>
+        </li>
+        <li class="hidden" id="no">
+          <a href="wonderlandsxshowtime.html" id="wond" class="img">WonderlandsxShowtime</a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="gameS"  class="img">GAMEPLAY</a>  
+        </li>
+      </ul>
+    </div>    
+</nav>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="virtual" href="virtual-singer.html">Virtual Singer</a></li>
+       <li><a id="leo" href="leo-need.html">Leo/need</a></li>
+       <li><a id="more" href="more-more-jump.html">MORE MORE JUMP!</a></li>
+       <li><a id="vivid" href="vivid-bad-squad.html">Vivid BAD SQUAD</a></li>
+       <li><a id="wonderlands" href="wonderlandsxshowtime.html">WonderlandsxShowtime</a></li>
+       <li><a id="night" href="25-ji-night-code-de.html">25-ji, Night Code de.</a></li>
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">about</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about.html" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" id="songS" class="img">SONGS</a>
+        </li>
+        <li>
+          <a href="#" id="charS" class="img">CHARACTERS<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a></li>
+        <li class="bottm">
+          <a href="gameplay.html" id="gameS"  class="img">GAMEPLAY</a>  
+        </li>
+      </ul>
+    </div>    
+  </nav>
+
+  <div class="hold">
+  <p>Project SEKAI COLORFUL STAGE! feat. Hatsune Miku is a mobile rhythem game created by a collab between SEGA, Craft Egg, Colorful Palette, and Crypton Future Media for android and IOS.</p>
+   <h2>Story</h2>
+   <div id="story_hold" class="next">
+  <img  src="https://pjsekai.sega.jp/assets/images/story/img_main.png" width="50%"  height="auto">
+  <p>The game is set in Shibuya, Tokyo. A girl named Hoshino Ichika, walks through the streets and sees an LCD screen displaying Hatsune Miku.
+
+Upon returning home, she discovers a song named "Untitled" on her smartphone. Out of curiously, Ichika plays the song, only to get surrounded by a white light, and arrives at an unknown place. Miku stands in front of Ichika, welcoming her to Sekai, and inviting her to sing together.<br>Sekai is a mysterious world
+that reflects people's "real feelings" that is different from the real world.
+There are as many sekai as there are feelings, and their appearance changes according to the feelings.
+</p>
+
+ 
+  </div>
+  <div style="margin-top: 10px; display: flex;">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6490162.579559135!2d132.91619815598747!3d37.412891145101824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1d53d5f127%3A0x8d546c533ec6f3c7!2sSega%20Akihabara%20Building%204!5e0!3m2!1sen!2sca!4v1604679885914!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+     <p>Sega company that made the app.</p>
+  </div>
+   <div id="hodler">
+  <h2>Bands</h2>
+  <ul>
+    <li><a href="virtual-singer.html"><img src="https://pjsekai.sega.jp/assets/images/character/group_navi01.jpg"></a></li>
+    <li><a href="leo-need.html"><img src="https://pjsekai.sega.jp/assets/images/character/group_navi02.jpg"></a></li>
+    <li><a href="more-more-jump.html"><img src="https://pjsekai.sega.jp/assets/images/character/group_navi03.jpg"></a></li>
+    <li><a href="vivid-bad-squad.html"><img src="https://pjsekai.sega.jp/assets/images/character/group_navi04.jpg"></a></li>
+    <li><a href="wonderlandsxshowtime.html"><img src="https://pjsekai.sega.jp/assets/images/character/group_navi05.jpg"></a></li>
+    <li><a href="25-ji-night-code-de.html"><img src="https://pjsekai.sega.jp/assets/images/character/group_navi06.jpg"></a></li>
+  </ul>
+  </div>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Tifx6OauCu8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div height="50px"></div>
+ 
+  
+<!--  //yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+//yt3.ggpht.com/qiPATgfTxSHZxh6CtWl7GH4uZs5hMwcJ_Ll3f4zEGg68hi4ahQxAaDjeWCS3HaxNrb3HR_NQ=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+https://yt3.ggpht.com/a/AATXAJw7AFYm5sscegyt_5jOEI6Q1kiLZSJxBVkQPfmw=s288-c-k-c0xffffffff-no-rj-mo
+https://yt3.ggpht.com/a/AATXAJw7AFYm5sscegyt_5jOEI6Q1kiLZSJxBVkQPfmw=s144-c-k-c0xffffffff-no-rj-mo
+https://yt3.ggpht.com/a/AATXAJw7AFYm5sscegyt_5jOEI6Q1kiLZSJxBVkQPfmw=s100-c-k-c0xffffffff-no-rj-mo
+
+-->
+<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/XAg1jDDG49Y?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<footer>
+ <div class="middle">
+  <p class="small">Author: Jessi Langager</p>
+  <p class="small"> © SEGA / © Craft Egg Inc. Developed by Colorful Palette / © Crypton Future Media, INC. Www.piapro.net All rights reserved.<br>The setting of Piapro Characters in this work is the setting in "Project Sekai" and is different from the official setting.<br>The product names and company names mentioned are registered trademarks of each company.<br>Images, texts, information, sounds, videos, etc. used on this site are protected by the copyright of SEGA Group Co., Ltd. or its affiliated companies.<br>Reproduction, reprinting, etc. is prohibited without the permission of the copyright holder.<p></div>
+</footer>
+  </div>
+</body>
+</html>

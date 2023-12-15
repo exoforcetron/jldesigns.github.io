@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <title>More More Jump!</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/character.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/responsive_home.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <script type="text/javascript" src="js/selector.js"></script>
+  <link rel="icon" href="media/more.ico" type="image/x-icon">
+</head>
+<body onload="my()">
+ <div id="nothing">
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="home.html"><img  src="https://pjsekai.sega.jp/assets/images/shared/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+     <a href="about.html" id="about">ABOUT</a>
+     <a href="songs.html" id="songs">SONGS</a>
+     <a href="#" id="char">CHARACTERS<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="#707070"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>
+     </a>
+     <a  href="gameplay.html" id="game">GAMEPLAY</a>
+    </div>
+    <h1 id="empty" class="hidden">yes</h1>
+    <h1 id="whats" class="hidden">yes</h1>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="virtual" href="virtual-singer.html">Virtual Singer</a></li>
+       <li><a id="leo" href="leo-need.html">Leo/need</a></li>
+       <li><a id="more" href="more-more-jump.html">MORE MORE JUMP!</a></li>
+       <li><a id="vivid" href="vivid-bad-squad.html">Vivid BAD SQUAD</a></li>
+       <li><a id="wonderlands" href="wonderlandsxshowtime.html">WonderlandsxShowtime</a></li>
+       <li><a id="night" href="25-ji-night-code-de.html">25-ji, Night Code de.</a></li>
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">char</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about.html" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="songs.html" id="songS" class="img">SONGS</a>
+        </li>
+        <li>
+          <a href="#" id="charS" class="img">CHARACTERS<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="hidden" id="noo">
+          <a href="more-more-jump.html" id="moremore" class="img">MORE MORE JUMP!</a>
+        </li>
+        <li class="hidden" id="no">
+          <a href="wonderlandsxshowtime.html" id="wond" class="img">WonderlandsxShowtime</a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="gameS"  class="img">GAMEPLAY</a>  
+        </li>
+      </ul>
+    </div>    
+  </nav>
+   <div id="title">
+    <img src="https://pjsekai.sega.jp/assets/images/character/unite02/logo_group01.png">
+  </div>
+  <div id="vid_mid">
+  <iframe  width="560" height="315" src="https://www.youtube-nocookie.com/embed/nxHtqMIryXc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div id="char_holder"> 
+   <h1 id="name" class="hidden">one</h1>
+    <div class="margin">
+    <div class="triangle-right" onclick="right()">
+    </div>
+    <div class="triangle-left" onclick="left()"></div>
+    
+     <div id="one" class="contents">
+        <h2>Momoi Airi</h2>
+         <h3>“Do you think you can become an idol just like that!?”</h3>
+         <table style="width: 100%">
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>March 19</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>156 cm</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>Miyamasuzaka Girls Academy</td>
+          </tr>
+          <tr>
+            <th>School year</th>
+            <td>2-D</td>
+          </tr>
+          <tr>
+            <th>Hobbies</th>
+            <td>Idol research</td>
+          </tr>
+          <tr>
+            <td class="invis">hi</td>
+            <td>Shopping</td>
+          </tr>
+          <tr>
+            <th>Special Skills</th>
+            <td>Cooking</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Taking care of children</td>
+          </tr>
+          <tr>
+            <th>Dislikes</th>
+            <td>Being allergic to cats</td>
+          </tr>
+         </table>
+         <p>A former idol, who appeared on variety shows and was once popular. Although she is confident and aggressive; she had love, passion and a strong pride in her work as an idol. Now, for some reason she had quit the office and the idol is retired.</p>
+         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TTunirbEa8M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+       
+      <div id="two" class="contents hidden">
+        <h2>Kiritani haruka</h2>
+         <h3>“Being an idol isn't all it's cracked up to be...”</h3>
+         <table style="width: 100%">
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>October 5</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>163 cm</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>Miyamasuzaka Girls Academy</td>
+          </tr>
+          <tr>
+            <th>School year</th>
+            <td>1-C</td>
+          </tr>
+          <tr>
+            <th>Hobbies</th>
+            <td>Collecting penguins merchandise
+</td>
+          </tr>
+          <tr>
+            <th>Special Skills</th>
+            <td>Basketball</td>
+          </tr>
+          <tr>
+            <th>Dislikes</th>
+            <td>Laziness</td>
+          </tr>
+         </table>
+         <p>Belongs to the popular national idol group “ASRUN”. She was charismatic and extremely popular in the group. However, the group disbanded and she went back to school.</p>
+         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mtg8Vgy0A7Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div> 
+      <div id="three" class="contents hidden">
+        <h2>Hanasato Minori</h2>
+         <h3>“I'll do more!”</h3>
+         <table style="width: 100%">
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>April 14</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>158 cm</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>Miyamasuzaka Girls Academy</td>
+          </tr>
+          <tr>
+            <th>School year</th>
+            <td>1-A</td>
+          </tr>
+          <tr>
+            <th>Hobbies</th>
+            <td>Making dance choreography</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Writing in diary</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Caring for animals</td>
+          </tr>
+          <tr>
+            <th>Special Skills</th>
+            <td>Creating catchphrases</td>
+          </tr>
+          <tr>
+            <th>Dislikes</th>
+            <td>Being calm</td>
+          </tr>
+         </table>
+         <p>A pure dedicated and single-minded hard-working person. After seeing Harukai Kritani of idol group ASRUN, she started aiming to become an idol. She tried auditions multiple times but failed every time.</p>
+         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8Y30-Yqlimk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div> 
+       <div id="four" class="contents hidden">
+        <h2>Hinomori Shizuku</h2>
+         <h3>“Is this really the idol life I dreamt of…?”</h3>
+         <table style="width: 100%">
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>December 6</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>168 cm</td>
+          </tr>
+          <tr>
+            <th>School</th>
+            <td>Miyamasuzaka Girls Academy</td>
+          </tr>
+          <tr>
+            <th>School year</th>
+            <td>2-D</td>
+          </tr>
+          <tr>
+            <th>Hobbies</th>
+            <td>Reading</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Walking</td>
+          </tr>
+          <tr>
+            <th>Special Skills</th>
+            <td>Kyudo</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Embroidery</td>
+          </tr>
+          <tr>
+            <th>Dislikes</th>
+            <td>Reading maps</td>
+          </tr>
+          <tr>
+            <td class="invis"></td>
+            <td>Operating Machines</td>
+          </tr>
+         </table>
+         <p>An active idol that is a member of idol group Cheerful*Days. Fans like her mysterious and mature appearance. However, this causes group members to be jealous of her.</p>
+         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WXWuOGDs6v8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>  
+    
+     </div>
+     <div class="image" id="cont_img">
+      <img id="one_img" class="right" src="https://pjsekai.sega.jp/assets/images/character/unite02/chara_03.png?191118"> 
+      <img id="two_img" class="right hidden" src="https://pjsekai.sega.jp/assets/images/character/unite02/chara_02.png?191118"> 
+      <img id="four_img" class="right hidden" src="https://pjsekai.sega.jp/assets/images/character/unite02/chara_04.png?191118"> 
+      <img id="three_img" class="right hidden" src="https://pjsekai.sega.jp/assets/images/character/unite02/chara_01.png?191118"> 
+      </div>
+    </div>
+<footer>
+ <div class="middle">
+  <p class="small">Author: Jessi Langager</p>
+  <p class="small"> © SEGA / © Craft Egg Inc. Developed by Colorful Palette / © Crypton Future Media, INC. Www.piapro.net All rights reserved.<br>The setting of Piapro Characters in this work is the setting in "Project Sekai" and is different from the official setting.<br>The product names and company names mentioned are registered trademarks of each company.<br>Images, texts, information, sounds, videos, etc. used on this site are protected by the copyright of SEGA Group Co., Ltd. or its affiliated companies.<br>Reproduction, reprinting, etc. is prohibited without the permission of the copyright holder.<p></div>
+</footer>
+  </div>
+</body>
+</html>
